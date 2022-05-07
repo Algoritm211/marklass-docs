@@ -1,0 +1,11 @@
+title: Avatar
+type: object
+properties:
+  url:
+    type: string
+    example: 'http://res.cloudinary.com/lem-platform/image/upload/v1651612827/avatars/wmwa85pep5tza1egz0ht.jpg'
+    description: URL-address on Clodinary
+  name:
+    type: string
+    example: avatars/wmwa85pep5tza1egz0ht
+    description: Folder path on Clodinary

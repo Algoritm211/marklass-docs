@@ -1,0 +1,59 @@
+title: User
+type: object
+examples: []
+properties:
+  _id:
+    type: string
+  dateRegistration:
+    type: string
+    example: '2021-05-16T18:38:08.723+00:00'
+  role:
+    type: string
+    enum:
+      - student
+      - teacher
+    example: student
+  coursesAuthor:
+    type: array
+    items:
+      $ref: ./Course.yaml
+  courses:
+    type: array
+    items:
+      $ref: ./Course.yaml
+  likedCourses:
+    type: string
+  email:
+    type: string
+    example: 'algoritm211@gmail.com '
+  password:
+    type: string
+  name:
+    type: string
+    example: Oleksii
+  surname:
+    type: string
+    example: Horbunov
+  age:
+    type:
+      - string
+      - 'null'
+  birthdayDate:
+    type: string
+    example: 08-06-2001
+  avatar:
+    $ref: ./utils/Avatar.yaml
+  city:
+    type: string
+    example: Kiev
+  gender:
+    type: string
+    enum:
+      - man
+      - woman
+  stepsCompleted:
+    type: array
+    items:
+      $ref: ''
+description: User of Marklass platform
+x-internal: false
