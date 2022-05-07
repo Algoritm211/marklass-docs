@@ -1,0 +1,25 @@
+title: Quiz
+type: object
+description: Quiz step
+properties:
+  _id:
+    type: string
+  question:
+    type: string
+  options:
+    type: array
+    items:
+      type: string
+  correctAnswers:
+    type: array
+    items:
+      type: string
+  score:
+    type: integer
+  mode:
+    type: string
+    enum:
+      - single
+      - multiple
+  lesson:
+    $ref: ../Lesson.yaml

@@ -1,0 +1,10 @@
+title: Video
+type: object
+description: Video of course
+properties:
+  _id:
+    type: string
+  url:
+    type: string
+  lesson:
+    $ref: ../Lesson.yaml

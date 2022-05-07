@@ -1,0 +1,28 @@
+title: Code
+type: object
+description: 'Code step '
+properties:
+  _id:
+    type: string
+  question:
+    type: string
+  score:
+    type: integer
+  tests:
+    type: array
+    items:
+      type: object
+      properties:
+        _id:
+          type: string
+        input:
+          type: string
+        output:
+          type: string
+  language:
+    type: string
+    enum:
+      - nodejs
+      - python3
+  lesson:
+    $ref: ../Lesson.yaml

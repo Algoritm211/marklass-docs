@@ -1,0 +1,18 @@
+title: Lesson
+type: object
+description: Marklass lesson
+properties:
+  _id:
+    type: string
+  title:
+    type: string
+    example: Как работает useEffect в React?
+  course:
+    $ref: ./Course.yaml
+  steps:
+    oneOf:
+      - $ref: ./steps/Lecture.yaml
+      - $ref: ./steps/Essay.yaml
+      - $ref: ./steps/Video.yaml
+      - $ref: ./steps/Quiz.yaml
+      - $ref: ./steps/Code.yaml

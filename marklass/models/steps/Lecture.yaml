@@ -1,0 +1,11 @@
+title: Lecture
+type: object
+description: Lecture lesson type
+x-internal: false
+properties:
+  _id:
+    type: string
+  content:
+    type: string
+  lesson:
+    $ref: ../Lesson.yaml

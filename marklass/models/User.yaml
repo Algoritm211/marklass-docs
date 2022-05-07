@@ -1,6 +1,8 @@
 title: User
 type: object
 examples: []
+description: User of Marklass platform
+x-internal: false
 properties:
   _id:
     type: string
@@ -22,7 +24,9 @@ properties:
     items:
       $ref: ./Course.yaml
   likedCourses:
-    type: string
+    type: array
+    items:
+      $ref: ./Course.yaml
   email:
     type: string
     example: 'algoritm211@gmail.com '
@@ -36,8 +40,8 @@ properties:
     example: Horbunov
   age:
     type:
-      - string
       - 'null'
+      - number
   birthdayDate:
     type: string
     example: 08-06-2001
@@ -53,7 +57,8 @@ properties:
       - woman
   stepsCompleted:
     type: array
+    uniqueItems: true
+    deprecated: true
     items:
-      $ref: ''
-description: User of Marklass platform
-x-internal: false
+      type: array
+      items: {}

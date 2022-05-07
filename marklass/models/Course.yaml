@@ -1,5 +1,37 @@
 title: Course
 type: object
+description: Course model
 properties:
-  id:
+  _id:
     type: string
+  lessons:
+    type: array
+    items:
+      $ref: ./Lesson.yaml
+  students:
+    type: array
+    items:
+      $ref: ./User.yaml
+  author:
+    $ref: ./User.yaml
+  title:
+    type: string
+    example: Все про JS и TS
+  subject:
+    type: string
+    enum:
+      - math
+      - science
+      - it
+      - geography
+      - art
+      - english
+      - history
+  description:
+    type: string
+  likes:
+    type: integer
+  coursePreview:
+    $ref: ./utils/Avatar.yaml
+  isPublished:
+    type: boolean

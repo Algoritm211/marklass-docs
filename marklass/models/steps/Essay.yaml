@@ -1,0 +1,12 @@
+title: Essay
+type: object
+description: Step with open answer
+properties:
+  _id:
+    type: string
+  question:
+    type: string
+  lesson:
+    $ref: ../Lesson.yaml
+  score:
+    type: integer

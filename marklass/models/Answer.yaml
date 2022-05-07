@@ -1,0 +1,19 @@
+title: Answer
+type: object
+description: Answer to step
+properties:
+  _id:
+    type: string
+  content:
+    type: string
+  score:
+    type: integer
+  step:
+    oneOf:
+      - $ref: ./steps/Lecture.yaml
+      - $ref: ./steps/Video.yaml
+      - $ref: ./steps/Essay.yaml
+      - $ref: ./steps/Quiz.yaml
+      - $ref: ./steps/Code.yaml
+  user:
+    $ref: ./User.yaml
